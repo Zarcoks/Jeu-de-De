@@ -5,9 +5,9 @@ import random
 import time
 
 def preview():
-    print("Hi ! Welcome to my thimble random game !")
+    print("Hi ! Welcome to my dice random game !")
     time.sleep(1)
-    print("It's a very simple game, where you lanch two thimbles, and your goal is to make a score upper than the IA")
+    print("It's a very simple game, where you lanch two dices, and your goal is to make a score upper than the IA")
     time.sleep(1)
     print("To be honest, this is a base for other programs... but also nice to play ^^")
     time.sleep(1)
@@ -19,10 +19,10 @@ def preview():
 def game_start():
     print("\nFine ! lets begin the game...")
     time.sleep(1)
-    print("IA is building the thimbles...")
+    print("IA is building the dices...")
     time.sleep(2)
 
-    # building the thimbles:
+    # building the dices:
     exits = [1, 2, 3, 4, 5, 6]
     retry = True
     round = 1
@@ -30,11 +30,11 @@ def game_start():
     while retry:
         print("-- round " + str(round) + " --")
         time.sleep(1)
-        print("\nLaunch the thimbles !")
+        print("\nLaunch the dices !")
         input("--> ")
         time.sleep(1)
         score_player = exits[random.randint(0, 5)] + exits[random.randint(0, 5)]
-        print("thimbles are rolling...")
+        print("dices are rolling...")
         time.sleep(2)
         print("You made", score_player, '!')
         time.sleep(1)
