@@ -19,7 +19,7 @@ def preview():
 def game_start():
     print("\nFine ! lets begin the game...")
     time.sleep(1)
-    pritn("IA is building the thimbles...")
+    print("IA is building the thimbles...")
     time.sleep(2)
 
     # building the thimbles:
@@ -47,9 +47,9 @@ def game_start():
         time.sleep(1)
 
         if score_player > IA_score:
-            print("IA won ^^")
-        elif score_player < IA_score:
             print("You won...")
+        elif score_player < IA_score:
+            print("IA won ^^")
         else:
             print("It's draw ! Incredible...")
         
@@ -60,3 +60,13 @@ def game_start():
         while not(retry in pos):
             print("Bad answer ^^")
             retry = input("retry --> ")
+        
+        if retry == 'Y':
+            retry = True
+        else:
+            retry = False
+
+        round += 1
+
+
+preview()
